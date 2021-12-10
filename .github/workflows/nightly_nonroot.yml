@@ -2,8 +2,9 @@ name: Publish NonRoot Nightly Docker image
 
 on:
   push:
-    branches:
-      - master
+    paths:
+      - 'dockerfile_noroot'
+      - 'src/**'
 
 jobs:
   push_to_registry:

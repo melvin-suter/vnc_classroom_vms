@@ -2,8 +2,9 @@ name: Publish Root Nightly Docker image
 
 on:
   push:
-    branches:
-      - master
+    paths:
+      - 'dockerfile_root'
+      - 'src/**'
 
 jobs:
   push_to_registry:
