@@ -36,6 +36,14 @@ jobs:
           context: .
           push: true
           tags: 
-          - ${{ env.DOCKER_IMAGE }}:nightly
           - ${{ env.DOCKER_IMAGE }}:nightly-${{ env.GITHUB_JOB }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        with:
+          context: .
+          push: true
+          tags: 
+          - ${{ env.DOCKER_IMAGE }}:nightly
           labels: ${{ steps.meta.outputs.labels }}
