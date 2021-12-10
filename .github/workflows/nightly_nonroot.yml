@@ -1,4 +1,4 @@
-name: Publish NonRoot Docker image
+name: Publish NonRoot Nightly Docker image
 
 on:
   push:
@@ -34,7 +34,6 @@ jobs:
           context: .
           push: true
           tags: 
-          - ${{ steps.meta.outputs.tags }}
           - nightly
           - nonroot
           labels: ${{ steps.meta.outputs.labels }}

@@ -1,4 +1,4 @@
-name: Publish NonRoot Docker image
+name: Publish Root Stable Docker image
 
 on:
   release:
@@ -32,8 +32,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: 
-          - ${{ steps.meta.outputs.tags }}
-          - stable
-          - root
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
