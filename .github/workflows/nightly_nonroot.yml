@@ -1,8 +1,9 @@
 name: Publish NonRoot Docker image
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+    - master
 
 jobs:
   push_to_registry:
