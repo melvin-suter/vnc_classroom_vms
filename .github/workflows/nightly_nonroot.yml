@@ -35,8 +35,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: 
-          - ${{ env.DOCKER_IMAGE }}:nightly-${{ env.GITHUB_JOB }}
+          tags: ${{ env.DOCKER_IMAGE }}:nightly-${{ env.GITHUB_JOB }}
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Build and push Docker image
@@ -44,6 +43,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: 
-          - ${{ env.DOCKER_IMAGE }}:nightly
+          tags: ${{ env.DOCKER_IMAGE }}:nightly
           labels: ${{ steps.meta.outputs.labels }}
