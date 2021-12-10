@@ -20,7 +20,7 @@ ENV DISPLAY=:1 \
 EXPOSE $VNC_PORT $NO_VNC_PORT
 
 ENV SMB_HOST="smb"\
-    SMB_RO_MODE="ro"
+    SMB_RO_MODE="ro" 
 
 ### Envrionment config
 ENV HOME=/headless \
